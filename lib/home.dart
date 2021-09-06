@@ -9,11 +9,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  // Use the image picker plugin
   final picker = ImagePicker();
   File _image;
   bool _loading = false;
   List _output;
 
+  // Function to get image from camera
   pickImage() async {
     var image = await picker.getImage(source: ImageSource.camera);
 
@@ -25,6 +27,7 @@ class _HomeState extends State<Home> {
     classifyImage(_image);
   }
 
+  // Function to get camera from gallery
   pickGalleryImage() async {
     var image = await picker.getImage(source: ImageSource.gallery);
 
@@ -36,6 +39,7 @@ class _HomeState extends State<Home> {
     classifyImage(_image);
   }
 
+  // Change state after loading the model
   @override
   void initState() {
     super.initState();
@@ -47,12 +51,14 @@ class _HomeState extends State<Home> {
     });
   }
 
+  // Close the tensorflow model so it cause memory leak
   @override
   void dispose() {
     Tflite.close();
     super.dispose();
   }
 
+  // Function to classify the image
   classifyImage(File image) async {
     var output = await Tflite.runModelOnImage(
         path: image.path,
@@ -67,6 +73,7 @@ class _HomeState extends State<Home> {
     });
   }
 
+  // Function to load tensorflow lite model
   loadModel() async {
     await Tflite.loadModel(
         model: 'assets/model_unquant.tflite', labels: 'assets/labels.txt');
@@ -124,6 +131,7 @@ class _HomeState extends State<Home> {
                           SizedBox(
                             height: 20,
                           ),
+                          // If the output is not null display the classification label
                           _output != null
                               ? Text('${_output[0]['label']}',
                                   style: TextStyle(
@@ -140,6 +148,7 @@ class _HomeState extends State<Home> {
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
+                  // Button to pick image from camera
                   GestureDetector(
                     onTap: pickImage,
                     child: Container(
@@ -160,6 +169,7 @@ class _HomeState extends State<Home> {
                   SizedBox(
                     height: 12,
                   ),
+                  // Button to pick image from gallery
                   GestureDetector(
                     onTap: pickGalleryImage,
                     child: Container(
