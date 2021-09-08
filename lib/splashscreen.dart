@@ -18,14 +18,14 @@ class _MySplashState extends State<MySplash> {
         'Dog and Cat',
         style: TextStyle(
           fontWeight: FontWeight.bold,
-          fontSize: 30,
-          color: Color(0xFFE99600),
+          fontSize: 32,
+          color: Color(0xFFFFFFFF),
         ),
       ),
-      image: Image.asset('assets/cat.png'),
-      photoSize: 50.0,
-      backgroundColor: Colors.black,
-      loaderColor: Color(0xFFEEDA28),
+      image: Image.asset('assets/cat_dog.png'),
+      photoSize: 100.0,
+      backgroundColor: Color(0xFF22252B),
+      loaderColor: Color(0xFF3DD6AA),
     );
   }
 }

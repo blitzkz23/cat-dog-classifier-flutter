@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF101010),
+      backgroundColor: Color(0xFF22252B),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24),
         child: Column(
@@ -93,30 +93,33 @@ class _HomeState extends State<Home> {
             ),
             Text(
               "Teachable Machine CNN",
-              style: TextStyle(color: Color(0xFFEEDA28), fontSize: 15),
+              style: TextStyle(color: Color(0xFF3DD6AA), fontSize: 16),
             ),
             SizedBox(
               height: 6,
             ),
             Text(
-              'Detect Dogs and Cats',
+              'Cats and Dogs Detection',
               style: TextStyle(
-                  color: Color(0xffE99680),
-                  fontWeight: FontWeight.w500,
+                  color: Color(0xFFFFFFFF),
+                  fontWeight: FontWeight.w600,
                   fontSize: 28),
             ),
             SizedBox(
-              height: 50,
+              height: 30,
             ),
             Center(
               child: _loading
                   ? Container(
-                      width: 300,
+                      width: 400,
                       child: Column(
                         children: [
-                          Image.asset('assets/cat.png'),
+                          Image.asset(
+                            'assets/cat_dog.png',
+                            width: double.infinity,
+                          ),
                           SizedBox(
-                            height: 50,
+                            height: 20,
                           ),
                         ],
                       ),
@@ -138,7 +141,7 @@ class _HomeState extends State<Home> {
                                       color: Colors.white, fontSize: 20.0))
                               : Container(),
                           SizedBox(
-                            height: 20,
+                            height: 30,
                           )
                         ],
                       ),
@@ -152,38 +155,46 @@ class _HomeState extends State<Home> {
                   GestureDetector(
                     onTap: pickImage,
                     child: Container(
-                      width: MediaQuery.of(context).size.width - 260,
+                      width: MediaQuery.of(context).size.width - 160,
                       alignment: Alignment.center,
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 17),
                       decoration: BoxDecoration(
-                        color: Color(0xFFE99600),
+                        color: Color(0xFF262930),
                         borderRadius: BorderRadius.circular(6),
+                        border: new Border.all(
+                            color: Color(0xFF2B2E36),
+                            width: 2.0,
+                            style: BorderStyle.solid),
                       ),
                       child: Text(
                         'Take a photo',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Color(0xFF3DD6AA)),
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 12,
+                    height: 20,
                   ),
                   // Button to pick image from gallery
                   GestureDetector(
                     onTap: pickGalleryImage,
                     child: Container(
-                      width: MediaQuery.of(context).size.width - 260,
+                      width: MediaQuery.of(context).size.width - 160,
                       alignment: Alignment.center,
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 17),
                       decoration: BoxDecoration(
-                        color: Color(0xFFE99600),
+                        color: Color(0xFF262930),
                         borderRadius: BorderRadius.circular(6),
+                        border: new Border.all(
+                            color: Color(0xFF2B2E36),
+                            width: 2.0,
+                            style: BorderStyle.solid),
                       ),
                       child: Text(
                         'Upload',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Color(0xFF3DD6AA)),
                       ),
                     ),
                   )
