@@ -1,7 +1,8 @@
 # Cat and Dog Classifier
 
- <img src="https://raw.githubusercontent.com/blitzkz23/cat-dog-classifier-flutter/main/assets/thumbnails/cat_dog_thumbnails.png" alt="project"/> </a>
-
+ <img src="https://raw.githubusercontent.com/blitzkz23/cat-dog-classifier-flutter/main/assets/thumbnails/cat_dog_thumbnails.png" alt="project"/> </img>
+ ## CNN models made in https://teachablemachine.withgoogle.com/
+ <img src="https://raw.githubusercontent.com/blitzkz23/cat-dog-classifier-flutter/main/assets/thumbnails/cnn_models.jpeg" alt="project"/> </img>
 ## Getting Started
 
 This project is a starting point for a Flutter application.
