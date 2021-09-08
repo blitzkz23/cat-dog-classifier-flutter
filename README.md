@@ -1,4 +1,4 @@
-# cat_dog_classifier
+# Cat and Dog Classifier
 
 A new Flutter project.
 
