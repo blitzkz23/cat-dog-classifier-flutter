@@ -1,6 +1,6 @@
 # Cat and Dog Classifier
 
- <img src="https://raw.githubusercontent.com/blitzkz23/cat-dog-classifier-flutter/main/assets/thumbnails/cat_dog_thumbnails" alt="project"/> </a>
+ <img src="https://raw.githubusercontent.com/blitzkz23/cat-dog-classifier-flutter/main/assets/thumbnails/cat_dog_thumbnails.png" alt="project"/> </a>
 
 ## Getting Started
 
