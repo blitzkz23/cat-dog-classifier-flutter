@@ -1,7 +1,8 @@
 # Cat and Dog Classifier
 
  <img src="https://raw.githubusercontent.com/blitzkz23/cat-dog-classifier-flutter/main/assets/thumbnails/cat_dog_thumbnails.png" alt="project"/> </img>
- ## CNN models made in https://teachablemachine.withgoogle.com/
+ ### CNN models made in https://teachablemachine.withgoogle.com/
+ ### Dataset source: https://www.kaggle.com/tongpython/cat-and-dog
  <img src="https://raw.githubusercontent.com/blitzkz23/cat-dog-classifier-flutter/main/assets/thumbnails/cnn_models.jpeg" alt="project"/> </img>
 ## Getting Started
 
